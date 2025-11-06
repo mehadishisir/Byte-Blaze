@@ -1,10 +1,13 @@
-import React from "react";
-import Navbar from "../../components/Header/navbar/Navbar";
+import HeroSection from "../../components/Hero/HeroSection";
+import wave from "../../../assets/wave.svg";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is home</h1>
+      <div className="flex relative flex-col justify-center items-center h-[calc(100vh-116px)]">
+        <HeroSection></HeroSection>
+        <img src={wave} alt="wave" className="w-full absolute bottom-0 -z-10" />
+      </div>
     </div>
   );
 };

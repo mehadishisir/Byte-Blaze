@@ -27,11 +27,32 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/blogs">Blogs</NavLink>
-            <NavLink to="/Bookmarks">Bookmarks</NavLink>
+        <div className="flex-none gap-4 flex items-center">
+          <ul className="menu menu-horizontal px-1 gap-5">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary  font-bold" : "font-bold"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive ? "text-primary  font-bold" : "font-bold"
+              }
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/Bookmarks"
+              className={({ isActive }) =>
+                isActive ? "text-primary  font-bold" : "font-bold"
+              }
+            >
+              Bookmarks
+            </NavLink>
           </ul>
           <label className="toggle text-base-content">
             <input
