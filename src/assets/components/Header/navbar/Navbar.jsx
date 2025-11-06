@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -19,21 +21,17 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-sm shadow-gray-200 px-10 fixed w-full z-10">
         <div className="flex-1">
-          <a className="btn btn-ghost text-secondary gap-0 font-bold text-xl">
-            Byte<span className="text-primary">Blaze</span>
-          </a>
+          <Link to="/">
+            <a className="btn btn-ghost text-secondary gap-0 font-bold text-xl">
+              Byte<span className="text-primary">Blaze</span>
+            </a>
+          </Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Blogs</a>
-            </li>
-            <li>
-              <a>Bookmarks</a>
-            </li>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/blogs">Blogs</NavLink>
+            <NavLink to="/Bookmarks">Bookmarks</NavLink>
           </ul>
           <label className="toggle text-base-content">
             <input
