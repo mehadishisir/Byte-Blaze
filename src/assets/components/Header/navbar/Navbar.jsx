@@ -21,10 +21,11 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-sm shadow-gray-200 px-10 fixed w-full z-10">
         <div className="flex-1">
-          <Link to="/">
-            <a className="btn btn-ghost text-secondary gap-0 font-bold text-xl">
-              Byte<span className="text-primary">Blaze</span>
-            </a>
+          <Link
+            to="/"
+            className="btn btn-ghost text-secondary gap-0 font-bold text-xl"
+          >
+            Byte<span className="text-primary">Blaze</span>
           </Link>
         </div>
         <div className="flex-none gap-4 flex items-center">
