@@ -91,18 +91,7 @@ const BlogData = () => {
           </div>
         </article>
         <Outlet></Outlet>
-        <div>
-          <div className="flex flex-wrap py-6 gap-2 border-t border-dashed border-gray-300">
-            {tags.map((tag, index) => (
-              <a
-                key={index}
-                className="px-3 py-1 rounded-sm hover:underline bg-violet-100 text-gray-900"
-              >
-                #{tag}
-              </a>
-            ))}
-          </div>
-        </div>
+        <div></div>
       </div>
     </div>
   );

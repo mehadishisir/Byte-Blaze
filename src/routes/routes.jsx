@@ -31,10 +31,14 @@ export const router = createBrowserRouter([
           {
             index: true,
             Component: Content,
+            loader: ({ params }) =>
+              fetch(`https://dev.to/api/articles/${params.id}`),
           },
           {
             path: "author",
             Component: author,
+            loader: ({ params }) =>
+              fetch(`https://dev.to/api/articles/${params.id}`),
           },
         ],
       },
