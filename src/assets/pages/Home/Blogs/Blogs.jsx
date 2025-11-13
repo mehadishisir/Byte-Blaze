@@ -1,11 +1,16 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigation } from "react-router";
 import Blog from "./Blog";
+import Loader from "../../../components/Loader/Loader";
 
 const Blogs = () => {
   // const [blogs, setBlogs] = useState([]);
+  const navigation = useNavigation();
   const blogs = useLoaderData();
-  console.log(blogs);
+  if (navigation.state === "loading") {
+    return <Loader></Loader>;
+  }
+  // console.log(blogs);
   return (
     <div>
       <section className="text-gray-900 bg-gray-100">
